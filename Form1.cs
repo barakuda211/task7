@@ -308,12 +308,6 @@ namespace task7
 
             foreach (Polygon pol in mesh.polygons)
             {
-
-                //if (LocPoint(ScreenPos(pol.points[2]), ScreenPos(pol.points[0]), ScreenPos(pol.points[1])) == "Right")
-                //{
-                //    continue;
-                //}
-
                 double xx = 0;
                 double yy = 0;
                 double zz = 0;
@@ -381,7 +375,6 @@ namespace task7
             Point3D v1 = new Point3D(polygon[0].X - polygon[1].X, polygon[0].Y - polygon[1].Y, polygon[0].Z - polygon[1].Z, 0);
             Point3D v2 = new Point3D(polygon[2].X - polygon[1].X, polygon[2].Y - polygon[1].Y, polygon[2].Z - polygon[1].Z, 1);
             Point3D normalv = new Point3D(v1.Z * v2.Y - v1.Y * v2.Z, v1.X * v2.Z - v1.Z * v2.X, v1.Y * v2.X - v1.X * v2.Y, 2);
-            //Point3D normalv = new Point3D(v1.Y * v2.Z - v1.Z * v2.Y, v1.Z * v2.X - v1.X * v2.Z, v1.X * v2.Y - v1.Y * v2.X, 2);
             return Normalized_Vector(normalv);
         }
 
@@ -457,7 +450,7 @@ namespace task7
                 {
                     xx += p.X;
                     yy += p.Y;
-                    zz += p.Z; //Ошибка
+                    zz += p.Z;
                 }
 
                 xx /= mesh.points.Count();

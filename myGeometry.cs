@@ -16,13 +16,6 @@ namespace task7
             public double Y;
             public double Z;
             public int index;
-            //public Point3D(float x, float y, float z, int ind)
-            //{
-            //    X = x;
-            //    Y = y;
-            //    Z = z;
-            //    index = ind;
-            //}
 
             public Point3D(double x, double y, double z, int ind)
             {
@@ -136,9 +129,6 @@ namespace task7
                 return s.ToString();
             }
         }
-
-
-
         public class Mesh
         {
             public List<Point3D> points;
